@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bar chart using canvas</title>
+	<script type="text/javascript">
+		var data = [ 16, 68, 20, 30, 54, 22, 49 ];
+		var labels = ["JAN","FEB","MAR","APR","MAY","JUNE","JULY"];
+
+		function printGraph() {
+			var c = document.getElementById('canvas').getContext('2d');
+			//draw data
+			c.fillStyle = "blue";
+			
+			for(var i=0; i<data.length; i++) {
+				var dp = data[i];
+				c.fillRect(25 + i*100, 400-dp*5, 50, dp*5);
+			}
+			for(var i=0;i<labels.length;i++)
+			{
+				c.fillText(labels[i],30+i*100,420);
+			}
+		}
+
+		function printReverse() {
+			var c = document.getElementById('reverse-canvas').getContext('2d');
+			//draw data
+			c.fillStyle = "blue";
+			
+			for(var i=0; i<data.length; i++) {
+				var dp = data[i];
+				c.fillRect(25 + i*100, 30, 50, dp*5);
+			}
+			for(var i=0;i<labels.length;i++)
+			{
+				c.fillText(labels[i],30+i*100,20);
+			}
+		}
+	</script>
+</head>	
+<body>
+	<div>
+		<canvas id="canvas" width="730" height="450" style="border:1px solid #000000;">
+		</canvas>
+		<canvas id="reverse-canvas" width="730" height="450" style="border:1px solid #000000;">
+		</canvas>
+	</div>
+	<script type="text/javascript">
+		printGraph();
+		printReverse();
+	</script>
+</body>
+</html>
