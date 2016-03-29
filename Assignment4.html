@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Html Tables</title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<th>Student Form</th>
+			<th>Image and List</th>
+		</tr>
+		<tr>
+		<td>
+		<form>
+		<div>
+			<label>First Name:<input type="text" name="firstname"></label><br><br>
+		</div>
+
+		<div>	
+			<label>Last Name:<input type="text" name="lastname"></label><br><br>
+		</div>	
+			
+		<textarea rows="10" cols="30">lets put something as value</textarea><br><br>
+
+		<h3>Please select your gender</h3>
+		<div>
+			<label><input type="radio" name="gender" value="male" checked>Male<br></label>
+			<label><input type="radio" name="gender" value="Female">Female<br></label>
+			<label><input type="radio" name="gender" value="other">Other<br><br></label>
+		</div>
+		
+		<fieldset>
+			<legend>Student Interest</legend>
+			<h3>Hobbies</h3>
+			<input type="checkbox" name="hobbie" value="travelling">Travelling
+			<input type="checkbox" name="hobbie" value="Playing">Playing
+			<input type="checkbox" name="hobbie" value="cooking">Cooking<br>
+
+			<h3>Grading</h3>
+			<select>
+			  <option value="grade1">Excellent</option>
+			  <option value="grade2">Good</option>
+			  <option value="grade3">Average</option>
+			</select>
+		</fieldset>
+
+		<button type="submit" name="submitbutton" value="submit">Submit</button>
+		</form>
+		</td>
+
+		<td>
+			<img src="image1.jpg" alt="flower" style="width:200px;height:200px">
+
+			<p>See the list of languages and frameworks as their subcategories<br>
+			Framework also have categories. 
+			</p>
+
+			<ul>
+			<li>Javascript
+				<ul>
+					<li>Angular js</li>
+				</ul>
+			
+			<li>Node js</li>
+				<ul>
+					<li>PHP</li>
+					<li>Backbone js</li>				
+					<ul>
+						<li>Thorax</li>
+						<li>YII Framework</li>
+					</ul>
+				</ul>
+			
+			<li>CSharp</li>
+				<ul>
+					<li>Java</li>
+				</ul>
+		</td>
+		</tr>
+		</form>
+	</table>
+</body>
+</html>
